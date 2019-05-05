@@ -177,11 +177,6 @@ public class DetailsFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    public Track getDisplayedTrack()
-    {
-        return mDisplayedTrack;
-    }
-
     public interface OnDetailsInteractionListener {
         void changeImage(Track track, String image);
         void setPhotoPath(String photoPath);

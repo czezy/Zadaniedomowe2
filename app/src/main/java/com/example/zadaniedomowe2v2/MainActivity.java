@@ -256,11 +256,6 @@ public class MainActivity extends AppCompatActivity implements TrackFragment.OnL
         mCurrentPhotoPath = photoPath;
     }
 
-    public String getPhotoPath()
-    {
-        return mCurrentPhotoPath;
-    }
-
     @Override
     public void changeImage(Track track, String image) {
         track.setImage(image);

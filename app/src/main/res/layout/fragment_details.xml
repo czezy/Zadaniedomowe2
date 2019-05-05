@@ -24,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/circle_drawable_green"
+        android:src="@drawable/circle_drawable_grey"
         app:layout_constraintBottom_toTopOf="@+id/nameView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
