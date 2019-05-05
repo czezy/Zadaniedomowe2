@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements TrackFragment.OnL
 
     @Override
     public void showDetails(Track track) {
+        currentTrack = track;
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
         {
             displayTrackInFragment(track);
@@ -210,8 +211,7 @@ public class MainActivity extends AppCompatActivity implements TrackFragment.OnL
                     setTracksChanged(true);
                     break;
                 case REQUEST_IMAGE_CAPTURE_DET:
-                    DetailsFragment detailsFragment = (DetailsFragment) getSupportFragmentManager().findFragmentById(R.id.detailsFragment);
-                    detailsFragment.getDisplayedTrack().setImage(mCurrentPhotoPath);
+                    currentTrack.setImage(mCurrentPhotoPath);
                     setTracksChanged(true);
                     break;
                 case CAM_MESS:
