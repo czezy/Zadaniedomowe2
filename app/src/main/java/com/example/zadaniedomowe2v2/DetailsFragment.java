@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static android.app.Activity.RESULT_OK;
+
 public class DetailsFragment extends Fragment implements View.OnClickListener {
 
     private OnDetailsInteractionListener mListener;
@@ -135,7 +137,7 @@ public class DetailsFragment extends Fragment implements View.OnClickListener {
                         imageViewLarge.setImageDrawable(getResources().getDrawable(R.drawable.circle_drawable_orange));
                         break;
                     default:
-                        imageViewLarge.setImageDrawable(getResources().getDrawable(R.drawable.circle_drawable_green));
+                        imageViewLarge.setImageDrawable(getResources().getDrawable(R.drawable.circle_drawable_grey));
                         break;
                 }
             }
@@ -154,14 +156,14 @@ public class DetailsFragment extends Fragment implements View.OnClickListener {
             }
         }
         else {
-            imageViewLarge.setImageDrawable(getResources().getDrawable(R.drawable.circle_drawable_green));
+            imageViewLarge.setImageDrawable(getResources().getDrawable(R.drawable.circle_drawable_grey));
         }
     }
 
     @Override
     public void onActivityResult(int request_code, int result_code, Intent data)
     {
-        if(request_code == REQUEST_IMAGE_CAPTURE_DET && result_code == getActivity().RESULT_OK)
+        if(request_code == REQUEST_IMAGE_CAPTURE_DET && result_code == RESULT_OK)
         {
             FragmentActivity holdingActivity = getActivity();
             if(holdingActivity != null)
